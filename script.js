@@ -41,3 +41,4 @@ function wipeOut() {
     document.getElementById('messageDisplay').textContent = '';
 }
 document.getElementById('wipeData').addEventListener('click', wipeOut);
+
