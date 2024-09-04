@@ -10,12 +10,12 @@ function decryptMessage() {
     const encryptedValues = encryptedInputElement.value.split(',').map(num => parseInt(num.trim()));
     const pin = parseInt(document.getElementById('pinDecrypt').value);
 
-    if (isNaN(pin)) {
+    if (isNaN(pin) || pin.toString().length < 4) {  //can't evaluate length of a number; evaluates as a string//
         alert('Please enter a valid PIN.');
         return;
     }
 
-    // Check if the encrypted values are valid
+    // Check if the encrypted values are valid//
     if (encryptedValues.some(num => isNaN(num))) {
         alert('Please enter valid encrypted values.');
         return;
@@ -26,12 +26,12 @@ function decryptMessage() {
         return reversedCharMap.get(originalNum) || '?'; // Default to '?' for unknown characters
     }).join('');
 
-    // Display the decrypted message
+    // display the decrypted message//
     document.getElementById('decryptedDisplay').textContent = decryptedMessage;
 }
 
-// Ensure that decryptMessage is globally accessible
+// make the decryptMessage global; No wipeOut() on the decryption side//
 window.decryptMessage = decryptMessage;
 
-//Event listener for decrypt button to run function//
+//event listener for decrypt button to run function//
 document.getElementById('decryptButton').addEventListener('click', decryptMessage);
