@@ -1,0 +1,1 @@
+This project was born out of pure curiosity. The intent is to be able to use modular JS files to handle sensitive maps (and eventually functions and variables), as well as scrambling a message based on a unique user input.
