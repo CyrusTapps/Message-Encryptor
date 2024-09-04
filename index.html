@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Encryptor</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./script.js" defer></script>
+</head>
+
+<body>
+    <h1>Message Encryptor</h1>
+    <label for="message"></label><br><br>
+    <textarea type="text" id="message" placeholder="Enter your message" rows="4" cols="30"></textarea><br><br>
+    <label for="pin">PIN:</label>
+    <input type="password" id="pin" placeholder="Enter your PIN"><br><br>
+    <button id="encryptButton">Encrypt</button>
+    <button id="wipeData">Clear original</button>
+
+    <h2>Message Details</h2>
+    <div id="originalMessage">
+        <strong>Original Message:</strong> <span id="messageDisplay">-</span>
+    </div>
+    <div id="encryptedMessage">
+        <strong>Encrypted Values:</strong> <span id="result">-</span>
+    </div>
+</body>
+
+</html>

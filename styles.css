@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#originalMessage,
+#encryptedMessage,
+#decryptedMessage {
+    margin-top: 10px;
+    font-size: 16px;
+}

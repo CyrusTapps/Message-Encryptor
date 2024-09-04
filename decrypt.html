@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Decryptor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="decrypt.js" defer></script>
+</head>
+
+<body>
+    <h1>Message Decryptor</h1>
+    <label for="encryptedInput">Encrypted Values (comma-separated):</label>
+    <input type="text" id="encryptedInput" placeholder="Enter encrypted values"><br><br>
+    <label for="pinDecrypt">PIN:</label>
+    <input type="password" id="pinDecrypt" placeholder="Enter your PIN"><br><br>
+    <button id="decryptButton">Decrypt</button>
+
+    <h2>Decryption Details</h2>
+    <div id="decryptedMessage">
+        <strong>Decrypted Message:</strong> <span id="decryptedDisplay">-</span>
+    </div>
+
+
+</body>
+
+</html>
