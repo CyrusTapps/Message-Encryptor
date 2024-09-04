@@ -9,3 +9,5 @@ export const charMap = new Map([
     ['K', 708], ['L', 718], ['M', 728], ['N', 738], ['O', 748], ['P', 758], ['Q', 768], ['R', 778], ['S', 788], ['T', 798],
     ['U', 808], ['V', 818], ['W', 828], ['X', 838], ['Y', 848], ['Z', 858]
 ]);
+
+//modified original object to a map to make iteration for decryption possible//

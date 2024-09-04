@@ -1,4 +1,4 @@
-import { charMap } from './charMap.js';
+import { charMap } from './charMap.js'; //changed from object to map to iterate to reverse key:value to value:key//
 
 function encryptMessage() {
     const messageElement = document.getElementById('message');
@@ -6,12 +6,12 @@ function encryptMessage() {
     const pin = parseInt(document.getElementById('pin').value);
 
     
-    if (isNaN(pin) || pin.toString().length < 4) {
+    if (isNaN(pin) || pin.toString().length < 4) { //can't evaluate length of a number; evaluates as a string//
         alert('Please enter a valid PIN. It must only contain numbers and be at least 4 digits long');
         return;
     }
 
-    // Display the original message
+    // display the original message//
     document.getElementById('messageDisplay').textContent = message;
 
     const encryptedValues = [];
@@ -20,25 +20,27 @@ function encryptMessage() {
         if (num !== undefined) {
             encryptedValues.push(num * pin);
         } else {
-            encryptedValues.push(0); // Default for undefined characters
+            encryptedValues.push(0); // default for undefined characters//
         }
     }
 
-    // Display the encrypted values
+    // display the encrypted values//
     document.getElementById('result').textContent = JSON.stringify(encryptedValues);
 }
 
-// Ensure that encryptMessage is globally accessible
+// make encryptMessage global scope temporarily; See wipeOut() below to clear//
 window.encryptMessage = encryptMessage;
 
-//Event listener//
+//event listener for encrypt button//
 document.getElementById('encryptButton').addEventListener('click', encryptMessage);
 
-//Null the values of PIN and the original message//
+//null the values of PIN and the original message//
 function wipeOut() {
     document.getElementById('pin').value = '';
     document.getElementById('message').value = '';
     document.getElementById('messageDisplay').textContent = '';
 }
+
+//event listener for wiping the data after deriving encrypted values//
 document.getElementById('wipeData').addEventListener('click', wipeOut);
 
